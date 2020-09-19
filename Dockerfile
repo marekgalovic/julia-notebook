@@ -15,4 +15,5 @@ RUN ln -fs /opt/julia-*/bin/julia /usr/local/bin/julia
 RUN julia -e 'import Pkg; Pkg.update()' && \
     julia -e 'import Pkg; Pkg.add("Flux"); using Flux' && \
     julia -e 'import Pkg; Pkg.add("JSON"); using JSON' && \
-    julia -e 'import Pkg; Pkg.add("BSON"); using BSON'
+    julia -e 'import Pkg; Pkg.add("BSON"); using BSON' && \
+    julia -e 'import Pkg; Pkg.add("IJulia"); using IJulia'
